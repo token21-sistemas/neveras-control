@@ -10,8 +10,19 @@ const styles = {
     fontFamily: 'Arial, sans-serif',
     color: '#1f2937',
   },
+  pageMobile: {
+    minHeight: '100vh',
+    background: '#f3f6fb',
+    padding: '12px',
+    fontFamily: 'Arial, sans-serif',
+    color: '#1f2937',
+  },
   wrapper: {
     maxWidth: 1300,
+    margin: '0 auto',
+  },
+  wrapperMobile: {
+    maxWidth: 520,
     margin: '0 auto',
   },
   headerCard: {
@@ -22,9 +33,23 @@ const styles = {
     marginBottom: 24,
     border: '1px solid #e5e7eb',
   },
+  headerCardMobile: {
+    background: '#ffffff',
+    borderRadius: 18,
+    boxShadow: '0 10px 30px rgba(15, 23, 42, 0.08)',
+    padding: 16,
+    marginBottom: 14,
+    border: '1px solid #e5e7eb',
+  },
   title: {
     margin: 0,
     fontSize: 32,
+    fontWeight: 700,
+    color: '#0f172a',
+  },
+  titleMobile: {
+    margin: 0,
+    fontSize: 24,
     fontWeight: 700,
     color: '#0f172a',
   },
@@ -32,6 +57,11 @@ const styles = {
     margin: '8px 0 0 0',
     color: '#64748b',
     fontSize: 16,
+  },
+  subtitleMobile: {
+    margin: '6px 0 0 0',
+    color: '#64748b',
+    fontSize: 13,
   },
   grid2: {
     display: 'grid',
@@ -52,9 +82,22 @@ const styles = {
     padding: 24,
     border: '1px solid #e5e7eb',
   },
+  cardMobile: {
+    background: '#ffffff',
+    borderRadius: 18,
+    boxShadow: '0 10px 30px rgba(15, 23, 42, 0.08)',
+    padding: 16,
+    border: '1px solid #e5e7eb',
+  },
   cardTitle: {
     margin: '0 0 16px 0',
     fontSize: 24,
+    fontWeight: 700,
+    color: '#0f172a',
+  },
+  cardTitleMobile: {
+    margin: '0 0 14px 0',
+    fontSize: 20,
     fontWeight: 700,
     color: '#0f172a',
   },
@@ -81,6 +124,14 @@ const styles = {
     color: '#475569',
     fontWeight: 600,
   },
+  labelMobile: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 6,
+    fontSize: 14,
+    color: '#475569',
+    fontWeight: 700,
+  },
   input: {
     height: 46,
     borderRadius: 12,
@@ -88,6 +139,23 @@ const styles = {
     padding: '0 12px',
     fontSize: 15,
     background: '#fff',
+  },
+  inputMobile: {
+    height: 52,
+    borderRadius: 12,
+    border: '1px solid #cbd5e1',
+    padding: '0 12px',
+    fontSize: 17,
+    background: '#fff',
+  },
+  inputMobileBig: {
+    height: 58,
+    borderRadius: 12,
+    border: '1px solid #cbd5e1',
+    padding: '0 14px',
+    fontSize: 22,
+    background: '#fff',
+    fontWeight: 700,
   },
   select: {
     height: 46,
@@ -97,12 +165,29 @@ const styles = {
     fontSize: 15,
     background: '#fff',
   },
+  selectMobile: {
+    height: 52,
+    borderRadius: 12,
+    border: '1px solid #cbd5e1',
+    padding: '0 12px',
+    fontSize: 16,
+    background: '#fff',
+  },
   textarea: {
     minHeight: 90,
     borderRadius: 12,
     border: '1px solid #cbd5e1',
     padding: 12,
     fontSize: 15,
+    background: '#fff',
+    resize: 'vertical',
+  },
+  textareaMobile: {
+    minHeight: 88,
+    borderRadius: 12,
+    border: '1px solid #cbd5e1',
+    padding: 12,
+    fontSize: 16,
     background: '#fff',
     resize: 'vertical',
   },
@@ -117,6 +202,17 @@ const styles = {
     cursor: 'pointer',
     padding: '0 18px',
   },
+  buttonMobile: {
+    height: 56,
+    borderRadius: 12,
+    border: 'none',
+    background: '#0f172a',
+    color: '#fff',
+    fontWeight: 700,
+    fontSize: 18,
+    cursor: 'pointer',
+    padding: '0 18px',
+  },
   buttonSecondary: {
     height: 42,
     borderRadius: 12,
@@ -125,6 +221,17 @@ const styles = {
     color: '#334155',
     fontWeight: 600,
     fontSize: 14,
+    cursor: 'pointer',
+    padding: '0 16px',
+  },
+  buttonSecondaryMobile: {
+    height: 48,
+    borderRadius: 12,
+    border: '1px solid #cbd5e1',
+    background: '#fff',
+    color: '#334155',
+    fontWeight: 700,
+    fontSize: 15,
     cursor: 'pointer',
     padding: '0 16px',
   },
@@ -157,6 +264,12 @@ const styles = {
     gap: 16,
     flexWrap: 'wrap',
     marginBottom: 24,
+  },
+  topBarMobile: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    gap: 12,
   },
   success: {
     background: '#dcfce7',
@@ -225,9 +338,22 @@ const styles = {
     padding: 16,
     marginBottom: 18,
   },
+  scanBoxMobile: {
+    background: '#eff6ff',
+    border: '1px solid #bfdbfe',
+    borderRadius: 16,
+    padding: 14,
+    marginBottom: 8,
+  },
   scanTitle: {
     margin: '0 0 10px 0',
     fontSize: 18,
+    fontWeight: 700,
+    color: '#1e3a8a',
+  },
+  scanTitleMobile: {
+    margin: '0 0 8px 0',
+    fontSize: 16,
     fontWeight: 700,
     color: '#1e3a8a',
   },
@@ -235,6 +361,11 @@ const styles = {
     margin: '0 0 12px 0',
     color: '#475569',
     fontSize: 14,
+  },
+  scanHelpMobile: {
+    margin: '0 0 10px 0',
+    color: '#475569',
+    fontSize: 13,
   },
   scanInput: {
     height: 52,
@@ -245,6 +376,17 @@ const styles = {
     background: '#fff',
     width: '100%',
     boxSizing: 'border-box',
+  },
+  scanInputMobile: {
+    height: 64,
+    borderRadius: 12,
+    border: '2px solid #93c5fd',
+    padding: '0 14px',
+    fontSize: 24,
+    background: '#fff',
+    width: '100%',
+    boxSizing: 'border-box',
+    fontWeight: 700,
   },
   scanResult: {
     marginTop: 12,
@@ -287,6 +429,16 @@ const styles = {
     display: 'flex',
     gap: 8,
     flexWrap: 'wrap',
+  },
+  mobileCards: {
+    display: 'grid',
+    gap: 10,
+  },
+  mobileReportCard: {
+    border: '1px solid #e5e7eb',
+    borderRadius: 14,
+    padding: 12,
+    background: '#f8fafc',
   },
 };
 
@@ -358,6 +510,7 @@ export default function App() {
     const saved = localStorage.getItem('user');
     return saved ? JSON.parse(saved) : null;
   });
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const [loginData, setLoginData] = useState({
     username: 'admin',
@@ -407,6 +560,7 @@ export default function App() {
 
   const isLogged = useMemo(() => Boolean(token), [token]);
   const isAdmin = useMemo(() => user?.rol === 'admin', [user]);
+  const isPdaUser = useMemo(() => !isAdmin && isMobile, [isAdmin, isMobile]);
 
   const equiposFiltrados = useMemo(() => {
     if (!form.vehiculo_id) return equipos;
@@ -421,11 +575,27 @@ export default function App() {
   });
 
   useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  useEffect(() => {
     if (isLogged) {
       cargarTodoInicial();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (!isPdaUser) return;
+    const timer = setTimeout(() => {
+      if (barcodeInputRef.current) {
+        barcodeInputRef.current.focus();
+      }
+    }, 200);
+    return () => clearTimeout(timer);
+  }, [isPdaUser, vista, reportes]);
 
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
@@ -753,6 +923,12 @@ export default function App() {
       setBarcode('');
       setScannerMessage('');
       setVista('reportes');
+
+      setTimeout(() => {
+        if (barcodeInputRef.current) {
+          barcodeInputRef.current.focus();
+        }
+      }, 150);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -1197,55 +1373,239 @@ export default function App() {
     });
   };
 
-  const renderNav = () => (
-    <div style={styles.navTabs}>
-      <button
-        type="button"
-        style={vista === 'reportes' ? styles.navButtonActive : styles.navButton}
-        onClick={() => setVista('reportes')}
-      >
-        Reportes
-      </button>
+  const renderNav = () => {
+    if (isPdaUser) return null;
 
-      {isAdmin && (
+    return (
+      <div style={styles.navTabs}>
         <button
           type="button"
-          style={vista === 'ubicaciones' ? styles.navButtonActive : styles.navButton}
-          onClick={() => setVista('ubicaciones')}
+          style={vista === 'reportes' ? styles.navButtonActive : styles.navButton}
+          onClick={() => setVista('reportes')}
         >
-          Ubicaciones
+          Reportes
         </button>
-      )}
 
-      {isAdmin && (
-        <button
-          type="button"
-          style={vista === 'equipos' ? styles.navButtonActive : styles.navButton}
-          onClick={() => setVista('equipos')}
-        >
-          Equipos
-        </button>
-      )}
+        {isAdmin && (
+          <button
+            type="button"
+            style={vista === 'ubicaciones' ? styles.navButtonActive : styles.navButton}
+            onClick={() => setVista('ubicaciones')}
+          >
+            Ubicaciones
+          </button>
+        )}
 
-      {isAdmin && (
-        <button
-          type="button"
-          style={vista === 'usuarios' ? styles.navButtonActive : styles.navButton}
-          onClick={() => setVista('usuarios')}
-        >
-          Usuarios
-        </button>
-      )}
+        {isAdmin && (
+          <button
+            type="button"
+            style={vista === 'equipos' ? styles.navButtonActive : styles.navButton}
+            onClick={() => setVista('equipos')}
+          >
+            Equipos
+          </button>
+        )}
 
-      {isAdmin && (
-        <button
-          type="button"
-          style={vista === 'envio-reportes' ? styles.navButtonActive : styles.navButton}
-          onClick={() => setVista('envio-reportes')}
-        >
-          PDF / Email
-        </button>
-      )}
+        {isAdmin && (
+          <button
+            type="button"
+            style={vista === 'usuarios' ? styles.navButtonActive : styles.navButton}
+            onClick={() => setVista('usuarios')}
+          >
+            Usuarios
+          </button>
+        )}
+
+        {isAdmin && (
+          <button
+            type="button"
+            style={vista === 'envio-reportes' ? styles.navButtonActive : styles.navButton}
+            onClick={() => setVista('envio-reportes')}
+          >
+            PDF / Email
+          </button>
+        )}
+      </div>
+    );
+  };
+
+  const renderVistaPda = () => (
+    <div style={{ display: 'grid', gap: 12 }}>
+      <div style={styles.cardMobile}>
+        <h2 style={styles.cardTitleMobile}>Nuevo reporte</h2>
+
+        <form onSubmit={guardarReporte} style={styles.form}>
+          <div style={styles.scanBoxMobile}>
+            <h3 style={styles.scanTitleMobile}>Escaneo</h3>
+            <p style={styles.scanHelpMobile}>
+              Escanea el código o escríbelo y pulsa Enter.
+            </p>
+
+            <input
+              ref={barcodeInputRef}
+              style={styles.scanInputMobile}
+              value={barcode}
+              onChange={(e) => setBarcode(e.target.value)}
+              onKeyDown={handleBarcodeKeyDown}
+              placeholder="Escanear código"
+            />
+
+            <div style={styles.scanResult}>
+              {scannerMessage || 'Esperando lectura del escáner'}
+            </div>
+          </div>
+
+          <label style={styles.labelMobile}>
+            Ubicación
+            <select
+              style={styles.selectMobile}
+              name="vehiculo_id"
+              value={form.vehiculo_id}
+              onChange={handleFormChange}
+            >
+              {ubicaciones.length === 0 ? (
+                <option value="">Sin ubicaciones</option>
+              ) : (
+                ubicaciones.map((u) => (
+                  <option key={u.id} value={u.id}>
+                    {formatearUbicacion(u)}
+                  </option>
+                ))
+              )}
+            </select>
+          </label>
+
+          <label style={styles.labelMobile}>
+            Equipo
+            <select
+              style={styles.selectMobile}
+              name="equipo_frio_id"
+              value={form.equipo_frio_id}
+              onChange={handleFormChange}
+            >
+              {equiposFiltrados.length === 0 ? (
+                <option value="">Sin equipos en esta ubicación</option>
+              ) : (
+                equiposFiltrados.map((e) => (
+                  <option key={e.id} value={e.id}>
+                    {e.nombre || e.codigo_equipo}
+                  </option>
+                ))
+              )}
+            </select>
+          </label>
+
+          <div style={styles.row2}>
+            <label style={styles.labelMobile}>
+              Fecha
+              <input
+                style={styles.inputMobile}
+                type="date"
+                name="fecha"
+                value={form.fecha}
+                onChange={handleFormChange}
+              />
+            </label>
+
+            <label style={styles.labelMobile}>
+              Hora
+              <input
+                style={styles.inputMobile}
+                type="time"
+                step="1"
+                name="hora"
+                value={form.hora}
+                onChange={handleFormChange}
+              />
+            </label>
+          </div>
+
+          <label style={styles.labelMobile}>
+            Temperatura
+            <input
+              style={styles.inputMobileBig}
+              type="number"
+              step="0.1"
+              name="temperatura_declarada"
+              value={form.temperatura_declarada}
+              onChange={handleFormChange}
+            />
+          </label>
+
+          <label style={styles.labelMobile}>
+            Estado
+            <select
+              style={styles.selectMobile}
+              name="estado"
+              value={form.estado}
+              onChange={handleFormChange}
+            >
+              <option value="correcto">Correcto</option>
+              <option value="alerta">Alerta</option>
+              <option value="incidencia">Incidencia</option>
+            </select>
+          </label>
+
+          <label style={styles.labelMobile}>
+            Observaciones
+            <textarea
+              style={styles.textareaMobile}
+              name="observaciones"
+              value={form.observaciones}
+              onChange={handleFormChange}
+              placeholder="Observaciones"
+            />
+          </label>
+
+          <button style={styles.buttonMobile} type="submit" disabled={loading}>
+            {loading ? 'Guardando...' : 'Guardar reporte'}
+          </button>
+        </form>
+      </div>
+
+      <div style={styles.cardMobile}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, alignItems: 'center', marginBottom: 12 }}>
+          <h2 style={{ ...styles.cardTitleMobile, marginBottom: 0 }}>Últimos reportes</h2>
+          <button
+            style={styles.buttonSecondaryMobile}
+            type="button"
+            onClick={async () => {
+              setError('');
+              setSuccess('');
+              try {
+                await cargarReportes();
+              } catch (err) {
+                setError(err.message);
+              }
+            }}
+          >
+            Recargar
+          </button>
+        </div>
+
+        <div style={styles.mobileCards}>
+          {reportes.slice(0, 4).map((r) => (
+            <div key={r.id} style={styles.mobileReportCard}>
+              <div style={{ fontWeight: 700, color: '#0f172a', marginBottom: 6 }}>
+                {r.equipo || r.codigo_equipo || '-'}
+              </div>
+              <div style={{ fontSize: 14, color: '#475569', marginBottom: 6 }}>
+                {r.hora || '-'} · {r.temperatura_declarada} ºC
+              </div>
+              <div style={{ marginBottom: 6 }}>
+                <span style={estadoStyle(r.estado)}>{r.estado}</span>
+              </div>
+              <div style={{ fontSize: 13, color: '#64748b' }}>
+                {r.observaciones || 'Sin observaciones'}
+              </div>
+            </div>
+          ))}
+
+          {reportes.length === 0 ? (
+            <div style={{ color: '#64748b' }}>No hay reportes registrados hoy.</div>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 
@@ -2244,25 +2604,27 @@ export default function App() {
 
   if (!isLogged) {
     return (
-      <div style={styles.page}>
-        <div style={styles.wrapper}>
-          <div style={styles.headerCard}>
-            <h1 style={styles.title}>Control de temperaturas</h1>
-            <p style={styles.subtitle}>Neveras y ubicaciones · Panel web</p>
+      <div style={isMobile ? styles.pageMobile : styles.page}>
+        <div style={isMobile ? styles.wrapperMobile : styles.wrapper}>
+          <div style={isMobile ? styles.headerCardMobile : styles.headerCard}>
+            <h1 style={isMobile ? styles.titleMobile : styles.title}>Control de temperaturas</h1>
+            <p style={isMobile ? styles.subtitleMobile : styles.subtitle}>
+              Neveras y ubicaciones · Panel web
+            </p>
           </div>
 
           {error ? <div style={styles.error}>{error}</div> : null}
           {success ? <div style={styles.success}>{success}</div> : null}
 
           <div style={styles.loginGrid}>
-            <div style={styles.card}>
-              <h2 style={styles.cardTitle}>Iniciar sesión</h2>
+            <div style={isMobile ? styles.cardMobile : styles.card}>
+              <h2 style={isMobile ? styles.cardTitleMobile : styles.cardTitle}>Iniciar sesión</h2>
 
               <form onSubmit={login} style={styles.form}>
-                <label style={styles.label}>
+                <label style={isMobile ? styles.labelMobile : styles.label}>
                   Usuario
                   <input
-                    style={styles.input}
+                    style={isMobile ? styles.inputMobile : styles.input}
                     name="username"
                     value={loginData.username}
                     onChange={handleLoginChange}
@@ -2270,10 +2632,10 @@ export default function App() {
                   />
                 </label>
 
-                <label style={styles.label}>
+                <label style={isMobile ? styles.labelMobile : styles.label}>
                   Contraseña
                   <input
-                    style={styles.input}
+                    style={isMobile ? styles.inputMobile : styles.input}
                     type="password"
                     name="password"
                     value={loginData.password}
@@ -2282,7 +2644,11 @@ export default function App() {
                   />
                 </label>
 
-                <button style={styles.button} type="submit" disabled={loading}>
+                <button
+                  style={isMobile ? styles.buttonMobile : styles.button}
+                  type="submit"
+                  disabled={loading}
+                >
                   {loading ? 'Entrando...' : 'Entrar'}
                 </button>
               </form>
@@ -2294,20 +2660,22 @@ export default function App() {
   }
 
   return (
-    <div style={styles.page}>
-      <div style={styles.wrapper}>
-        <div style={styles.headerCard}>
-          <div style={styles.topBar}>
+    <div style={isPdaUser ? styles.pageMobile : styles.page}>
+      <div style={isPdaUser ? styles.wrapperMobile : styles.wrapper}>
+        <div style={isPdaUser ? styles.headerCardMobile : styles.headerCard}>
+          <div style={isPdaUser ? styles.topBarMobile : styles.topBar}>
             <div>
-              <h1 style={styles.title}>Bienvenido {user?.username}</h1>
-              <p style={styles.subtitle}>
+              <h1 style={isPdaUser ? styles.titleMobile : styles.title}>
+                Bienvenido {user?.username}
+              </h1>
+              <p style={isPdaUser ? styles.subtitleMobile : styles.subtitle}>
                 Usuario: {user?.nombre_completo || user?.username} · Rol: {user?.rol}
               </p>
             </div>
 
-            <div style={{ display: 'flex', gap: 10 }}>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <button
-                style={styles.buttonSecondary}
+                style={isPdaUser ? styles.buttonSecondaryMobile : styles.buttonSecondary}
                 onClick={async () => {
                   setError('');
                   setSuccess('');
@@ -2320,7 +2688,10 @@ export default function App() {
               >
                 Recargar
               </button>
-              <button style={styles.button} onClick={salir}>
+              <button
+                style={isPdaUser ? styles.buttonMobile : styles.button}
+                onClick={salir}
+              >
                 Salir
               </button>
             </div>
@@ -2332,7 +2703,7 @@ export default function App() {
         {error ? <div style={styles.error}>{error}</div> : null}
         {success ? <div style={styles.success}>{success}</div> : null}
 
-        {vista === 'reportes' && renderVistaReportes()}
+        {vista === 'reportes' && (isPdaUser ? renderVistaPda() : renderVistaReportes())}
         {vista === 'ubicaciones' && isAdmin && renderVistaUbicaciones()}
         {vista === 'equipos' && isAdmin && renderVistaEquipos()}
         {vista === 'usuarios' && isAdmin && renderVistaUsuarios()}
