@@ -1,10 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-const HOST = window.location.hostname;
-const API_URL =
-  HOST === 'localhost' || HOST === '127.0.0.1'
-    ? 'http://127.0.0.1:3001/api'
-    : `http://${HOST}:3001/api`;
+const API_URL = '/api';
 
 const styles = {
   page: {
