@@ -806,16 +806,21 @@ export default function App() {
   const cargarTodoInicial = async (customToken) => {
     setError('');
     try {
-      const tareas = [
-        cargarReportes(customToken),
-        cargarCatalogos(customToken),
-      ];
+      const tareas = [cargarCatalogos(customToken)];
+
+      if (!isPdaUser) {
+        tareas.push(cargarReportes(customToken));
+      }
 
       if (isAdmin) {
         tareas.push(cargarUsuarios(customToken));
       }
 
       await Promise.all(tareas);
+
+      if (isPdaUser) {
+        cargarReportes(customToken).catch(() => {});
+      }
 
       setTimeout(() => {
         if (barcodeInputRef.current) {
@@ -852,16 +857,9 @@ export default function App() {
       localStorage.setItem('user', JSON.stringify(data.user));
       setSuccess('Login correcto');
 
-      const tareas = [
-        cargarReportes(data.token),
-        cargarCatalogos(data.token),
-      ];
-
-      if (data.user?.rol === 'admin') {
-        tareas.push(cargarUsuarios(data.token));
-      }
-
-      await Promise.all(tareas);
+      setTimeout(() => {
+        cargarTodoInicial(data.token);
+      }, 0);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -1564,7 +1562,15 @@ export default function App() {
       </div>
 
       <div style={styles.cardMobile}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, alignItems: 'center', marginBottom: 12 }}>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            gap: 8,
+            alignItems: 'center',
+            marginBottom: 12,
+          }}
+        >
           <h2 style={{ ...styles.cardTitleMobile, marginBottom: 0 }}>Últimos reportes</h2>
           <button
             style={styles.buttonSecondaryMobile}
