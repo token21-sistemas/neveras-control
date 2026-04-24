@@ -55,7 +55,9 @@ const createPool = async () => {
     return remotePool;
   }
 
-  throw new Error('❌ No se pudo conectar ni en local ni en remoto');
+  await remotePool.end().catch(() => {});
+  console.log('❌ No se pudo conectar ni en local ni en remoto');
+  return null;
 };
 
 const pool = await createPool();
